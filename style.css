@@ -225,12 +225,12 @@ li.active a {
 
   aside#aside-main {
     transition: 0.4s all;
-    width: 60%;
+    width: -100%;
     background: white;
     margin: 0px;
     padding: 0 1rem;
-    visibility: hidden;
-    display: none;
+    width: 40%;
+    transform: translateX(-100%);
   }
 
   aside#aside-main:target {
@@ -239,6 +239,24 @@ li.active a {
 
   article#card-columns {
     columns: 1;
+  }
+  /* animation moblie */
+  @keyframes showSlow {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes hideSlow {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }
 
